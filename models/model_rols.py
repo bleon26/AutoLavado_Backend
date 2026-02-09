@@ -1,14 +1,13 @@
+# pylint: disable=invalid-name, import-error, too-few-public-methods
 """
-Modelo de roles de usuarios para el sistema de autolavado.
+Docstring for autolavado_backend.models.modelRols
 """
-
 from sqlalchemy import Column, Integer, String, Boolean
 from config.db import Base
 
 
 class Rol(Base):
-    """Modelo de la tabla de roles."""
-
+    """Modelo de la tabla de roles"""
     __tablename__ = "tbc_roles"
 
     id = Column(Integer, primary_key=True, index=True)

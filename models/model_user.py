@@ -1,14 +1,13 @@
+# pylint: disable=invalid-name, import-error, too-few-public-methods
 """
-Modelo de usuarios para el sistema de autolavado.
+Docstring for autolavado_backend.models.modelUsers
 """
-
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
 from config.db import Base
 
 
 class User(Base):
-    """Modelo de la tabla de usuarios."""
-
+    """Modelo de la tabla de usuarios"""
     __tablename__ = "tbb_users"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -22,4 +21,4 @@ class User(Base):
     estatus = Column(Boolean)
     fecha_registro = Column(DateTime)
     fecha_modificacion = Column(DateTime)
-    correo = Column(String(80))
+    correo = Column(String)
